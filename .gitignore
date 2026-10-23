@@ -1,0 +1,10 @@
+# Archivos locales de IIS Express y del sistema operativo.
+.vs/
+*.log
+*.tmp
+Thumbs.db
+Desktop.ini
+
+# Configuración y referencia SQL locales con credenciales.
+/webapppolimusicv1_asp/includes/config.asp
+/webapppolimusicv1_asp/BDD_PoliMusic.sql
