@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+<symbol id="wave" viewBox="0 0 24 24"><path d="M4 10v4m4-7v10m4-13v16m4-13v10m4-7v4" /></symbol>
+<symbol id="home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z" /></symbol>
+<symbol id="search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="7" /><path d="m16 16 5 5" /></symbol>
+<symbol id="library" viewBox="0 0 24 24"><path d="M4 4v16M9 4v16m5-15 5-1 3 15-5 1Z" /></symbol>
+<symbol id="music" viewBox="0 0 24 24"><path d="M9 17V5l12-2v12M9 8l12-2" /><ellipse cx="6" cy="18" rx="3" ry="3" /><ellipse cx="18" cy="16" rx="3" ry="3" /></symbol>
+<symbol id="logout" viewBox="0 0 24 24"><path d="M9 4H4v16h5m0-8h12m-5-5 5 5-5 5" /></symbol>
+<symbol id="play" viewBox="0 0 24 24"><path d="m8 4 13 8-13 8Z" fill="currentColor" stroke="none" /></symbol>
+<symbol id="pause" viewBox="0 0 24 24"><path d="M6 4h4v16H6zm8 0h4v16h-4z" fill="currentColor" stroke="none" /></symbol>
+<symbol id="next" viewBox="0 0 24 24"><path d="m5 5 11 7-11 7Z" fill="currentColor" stroke="none" /><path d="M19 5v14" /></symbol>
+<symbol id="previous" viewBox="0 0 24 24"><path d="m19 5-11 7 11 7Z" fill="currentColor" stroke="none" /><path d="M5 5v14" /></symbol>
+<symbol id="shuffle" viewBox="0 0 24 24"><path d="M3 6h3c4 0 7 12 11 12h4m-4-4 4 4-4 4M3 18h3c1.5 0 3-2 4-4m4-4c1-2 2-4 3-4h4m-4-4 4 4-4 4" /></symbol>
+<symbol id="repeat" viewBox="0 0 24 24"><path d="M4 10V8a3 3 0 0 1 3-3h13m-4-4 4 4-4 4m4 5v2a3 3 0 0 1-3 3H4m4 4-4-4 4-4" /></symbol>
+<symbol id="volume" viewBox="0 0 24 24"><path d="M3 9h4l5-5v16l-5-5H3Zm13-1c2 2 2 6 0 8m3-11c4 4 4 10 0 14" /></symbol>
+<symbol id="muted" viewBox="0 0 24 24"><path d="M3 9h4l5-5v16l-5-5H3Zm13 0 6 6m0-6-6 6" /></symbol>
+<symbol id="plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16" /></symbol>
+<symbol id="edit" viewBox="0 0 24 24"><path d="m15 4 5 5M4 20l5-1L21 7a2 2 0 0 0-5-5L4 14Zm0 0 1-6" /></symbol>
+<symbol id="trash" viewBox="0 0 24 24"><path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7m4-7v7" /></symbol>
+<symbol id="headphones" viewBox="0 0 24 24"><path d="M3 14v-3a9 9 0 0 1 18 0v3M3 13h4v8H4a1 1 0 0 1-1-1Zm18 0h-4v8h3a1 1 0 0 0 1-1Z" /></symbol>
+</svg>
