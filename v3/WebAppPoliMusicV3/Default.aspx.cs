@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace WebAppPoliMusicV3
 {
@@ -11,7 +7,8 @@ namespace WebAppPoliMusicV3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Context.Items[Song.HomeViewKey] = true;
+            Server.Transfer("~/Song.aspx", false);
         }
     }
 }

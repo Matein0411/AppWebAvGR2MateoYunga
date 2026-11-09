@@ -1,0 +1,236 @@
+:root {
+    color-scheme: light;
+    --background: #faf9fa;
+    --sidebar: #f5f3f5;
+    --surface: #fff;
+    --ink: #231d23;
+    --muted: #655d65;
+    --line: #e9e2e7;
+    --rose: #b91e4a;
+    --rose-dark: #9f173d;
+    --rose-tint: #fbe8ee;
+    --sidebar-width: 14.25rem;
+    --player-height: 5.75rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-padding-bottom: calc(var(--player-height) + 1rem); }
+body { margin: 0; color: var(--ink); background: var(--background); }
+a { color: inherit; text-decoration: none; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+button:disabled { cursor: default; }
+:focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; }
+
+svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    flex-shrink: 0;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.skip-link {
+    position: fixed;
+    z-index: 5;
+    top: .8rem;
+    left: .8rem;
+    transform: translateY(-180%);
+    padding: .65rem 1rem;
+    background: var(--surface);
+    border-radius: .5rem;
+}
+
+.skip-link:focus { transform: translateY(0); }
+
+.app-shell {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+    min-height: 100vh;
+    padding-bottom: var(--player-height);
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    height: calc(100vh - var(--player-height));
+    display: flex;
+    flex-direction: column;
+    padding: 1.3rem .95rem 1rem;
+    overflow-y: auto;
+    border-right: 1px solid var(--line);
+    background: var(--sidebar);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: .7rem;
+    width: max-content;
+    font-size: 1.18rem;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -.045em;
+}
+
+.brand-mark {
+    display: grid;
+    place-items: center;
+    width: 2.45rem;
+    height: 2.45rem;
+    flex-shrink: 0;
+    border-radius: .75rem;
+    color: white;
+    background: linear-gradient(145deg, #df4263, #b51749);
+    box-shadow: 0 .3rem .85rem #b91e4a26;
+}
+
+.brand small {
+    display: block;
+    margin-top: .32rem;
+    color: var(--muted);
+    font-size: .72rem;
+    font-weight: 550;
+    letter-spacing: 0;
+}
+
+.brand-dot { color: var(--rose); }
+.side-nav { display: grid; gap: .25rem; margin: 1.8rem 0 1.45rem; }
+.side-nav a, .logout-link {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    padding: .66rem .7rem;
+    border-radius: .55rem;
+    color: var(--muted);
+    font-size: .9rem;
+    font-weight: 650;
+}
+
+.side-nav a:hover, .logout-link:hover { background: #ece7ec; color: var(--ink); }
+.side-nav a[aria-current="page"] { background: var(--rose-tint); color: var(--rose-dark); }
+.side-nav svg, .library-icon { color: var(--rose); }
+.sidebar-library { border-top: 1px solid var(--line); padding: 1.1rem .3rem; }
+.sidebar-library .eyebrow { margin-bottom: .8rem; color: var(--muted); }
+.library-link {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    padding: .38rem;
+    border-radius: .55rem;
+    font-size: .8rem;
+}
+
+.library-link:hover { background: var(--surface); }
+.library-icon {
+    display: grid;
+    place-items: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    flex-shrink: 0;
+    border-radius: .5rem;
+    background: var(--rose-tint);
+}
+
+.library-link small {
+    display: block;
+    margin-top: .18rem;
+    color: var(--muted);
+    font-size: .73rem;
+}
+
+.logout-link { margin-top: auto; }
+
+.main-panel { min-width: 0; }
+
+.eyebrow {
+    margin: 0;
+    color: var(--rose);
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    font-size: .71rem;
+    font-weight: 800;
+}
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: .45rem;
+    padding: .72rem 1.05rem;
+    border: 0;
+    border-radius: 999px;
+    font-size: .88rem;
+    font-weight: 750;
+    cursor: pointer;
+}
+
+.button.primary { background: var(--rose); color: white; }
+.button.primary:hover { background: var(--rose-dark); }
+
+.button:disabled { opacity: .64; }
+
+.auth-body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    background: radial-gradient(ellipse at top, #ffe2eb, var(--background) 75%);
+}
+
+.auth-card {
+    width: min(100%, 29rem);
+    padding: clamp(1.2rem, 5vw, 2.5rem);
+    border: 1px solid var(--line);
+    border-radius: 1.05rem;
+    background: var(--surface);
+    box-shadow: 0 1rem 3rem #471b3210;
+}
+
+.auth-card h1 { margin: 1.35rem 0 .3rem; font-size: 2.1rem; letter-spacing: -.05em; }
+.auth-card p { color: var(--muted); }
+.auth-card form { margin-top: 1.4rem; }
+.field { display: grid; gap: .4rem; margin-bottom: .9rem; }
+.field label { font-size: .87rem; font-weight: 650; }
+.field input {
+    min-width: 0;
+    padding: .65rem .76rem;
+    border: 1px solid #cec5cd;
+    border-radius: .5rem;
+    background: var(--background);
+    color: var(--ink);
+}
+
+.auth-card .button { width: 100%; }
+.auth-bottom { margin: 1rem 0 0; text-align: center; }
+.auth-bottom a { color: var(--rose-dark); text-decoration: underline; }
+.message { display: block; margin: .7rem 0; color: var(--rose-dark); }
+.message:empty { display: none; }
+.message.success { color: #23623c; }
+
+@media (max-width: 1000px) { :root { --sidebar-width: 11.5rem; } }
+
+@media (max-width: 720px) {
+    :root { --player-height: 8rem; }
+    .app-shell { grid-template-columns: minmax(0, 1fr); align-content: start; }
+    .sidebar {
+        position: static;
+        height: auto;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: .6rem;
+        padding: .75rem 1rem .4rem;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+    }
+    .sidebar-library { display: none; }
+    .side-nav { grid-column: 1 / -1; grid-row: 2; display: flex; flex-wrap: wrap; margin: 0; }
+    .side-nav a, .logout-link { gap: .35rem; padding: .48rem .55rem; font-size: .82rem; }
+    .logout-link { margin: 0; }
+}

@@ -1,0 +1,7 @@
+<%@ Master Language="C#" MasterPageFile="~/Site.Master" CodeBehind="Site.Mobile.Master.cs" Inherits="WebAppPoliMusicV3.Site_Mobile" %>
+<asp:Content ID="MobileHead" ContentPlaceHolderID="PageHead" runat="server">
+    <asp:ContentPlaceHolder ID="PageHead" runat="server" />
+</asp:Content>
+<asp:Content ID="MobileContent" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+</asp:Content>

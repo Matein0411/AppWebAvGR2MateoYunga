@@ -13,6 +13,7 @@ namespace WebAppPoliMusicV3
 
     public partial class SiteMaster
     {
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder PageHead;
 
         /// <summary>
         /// Control MainContent.

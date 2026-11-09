@@ -1,0 +1,51 @@
+<%@ Master Language="C#" CodeBehind="Site.Master.cs" Inherits="WebAppPoliMusicV3.SiteMaster" %>
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f5f6" />
+    <title><%: Page.Title %> · PoliMusic</title>
+    <link href="~/Content/polimusic.css" rel="stylesheet" />
+    <link href="~/SongCovers/cover-1.svg" rel="icon" type="image/svg+xml" />
+    <asp:ContentPlaceHolder ID="PageHead" runat="server" />
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+    <form runat="server">
+        <asp:ScriptManager runat="server" />
+        <div class="app-shell">
+            <aside class="sidebar">
+                <a class="brand" href="<%: ResolveUrl("~/") %>" aria-label="PoliMusic - Mateo.Yunga">
+                    <span class="brand-mark"><svg aria-hidden="true"><use href="<%: ResolveUrl("~/Content/icons.svg") %>#wave"></use></svg></span>
+                    <span>PoliMusic<small>Mateo.Yunga</small></span>
+                </a>
+                <nav class="side-nav" aria-label="Navegación principal">
+                    <a href="<%: ResolveUrl("~/") %>" aria-current="<%: IsHome ? "page" : "false" %>">
+                        <svg aria-hidden="true"><use href="<%: ResolveUrl("~/Content/icons.svg") %>#home"></use></svg>Inicio
+                    </a>
+                    <a href="<%: ResolveUrl("~/Song") %>" aria-current="<%: Page is WebAppPoliMusicV3.Song && !IsHome ? "page" : "false" %>">
+                        <svg aria-hidden="true"><use href="<%: ResolveUrl("~/Content/icons.svg") %>#library"></use></svg>Canciones
+                    </a>
+                    <a href="<%: ResolveUrl("~/Song") %>#song-search" data-find-song>
+                        <svg aria-hidden="true"><use href="<%: ResolveUrl("~/Content/icons.svg") %>#search"></use></svg>Buscar
+                    </a>
+                </nav>
+                <div class="sidebar-library">
+                    <p class="eyebrow">Tu biblioteca</p>
+                    <a class="library-link" href="<%: ResolveUrl("~/Song") %>#canciones" data-show-catalog>
+                        <span class="library-icon"><svg aria-hidden="true"><use href="<%: ResolveUrl("~/Content/icons.svg") %>#music"></use></svg></span>
+                        <span><strong>Todas las canciones</strong><small>Tu colección de sonidos</small></span>
+                    </a>
+                </div>
+                <a class="logout-link" href="<%: ResolveUrl("~/Logout") %>">
+                    <svg aria-hidden="true"><use href="<%: ResolveUrl("~/Content/icons.svg") %>#logout"></use></svg>Cerrar sesión
+                </a>
+            </aside>
+            <main id="main-content" class="main-panel">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </main>
+        </div>
+    </form>
+</body>
+</html>
