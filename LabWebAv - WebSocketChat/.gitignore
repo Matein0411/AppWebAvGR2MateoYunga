@@ -1,0 +1,19 @@
+# Dependencias y registros de npm
+node_modules/
+npm-debug.log*
+
+# Configuración local y credenciales
+.env
+.env.*
+credentials/
+/uploads/
+*service-account*.json
+*serviceAccount*.json
+*firebase-adminsdk*.json
+
+# Archivos generados por Firebase CLI y sus emuladores
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+firebase-export-*/

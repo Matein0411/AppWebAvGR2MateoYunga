@@ -1,0 +1,13 @@
+{
+  "auth": {
+    "providers": {
+      "emailPassword": true
+    }
+  },
+  "firestore": {
+    "database": "(default)",
+    "location": "southamerica-west1",
+    "edition": "standard",
+    "rules": "firestore.rules"
+  }
+}
